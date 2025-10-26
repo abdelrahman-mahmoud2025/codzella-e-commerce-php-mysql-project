@@ -1,4 +1,5 @@
 RewriteEngine On
+Options -MultiViews
 
 # Remove trailing slashes
 RewriteCond %{REQUEST_FILENAME} !-d
@@ -8,6 +9,9 @@ RewriteRule ^(.*)/$ /$1 [L,R=301]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+
+# Fallback for environments without mod_rewrite (Apache 2.4+)
+FallbackResource index.php
 
 # Prevent access to sensitive files
 <FilesMatch "\.(env|sql|md|log)$">

@@ -7,6 +7,14 @@ session_start();
 require_once __DIR__ . '/../config/env.php';
 require_once __DIR__ . '/../config/database.php';
 
+if (!defined('APP_URL') || APP_URL === '') {
+    $scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || (isset($_SERVER['SERVER_PORT']) && (int)$_SERVER['SERVER_PORT'] === 443) ? 'https' : 'http';
+    $host = $_SERVER['HTTP_HOST'] ?? 'localhost';
+    $basePath = rtrim(str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME'] ?? '/')), '/');
+    $basePath = ($basePath === '/' ? '' : $basePath);
+    define('APP_URL', $scheme . '://' . $host . $basePath);
+}
+
 // Autoload helpers
 require_once __DIR__ . '/../app/helpers/SessionHelper.php';
 require_once __DIR__ . '/../app/helpers/ValidationHelper.php';
@@ -28,9 +36,21 @@ require_once __DIR__ . '/../app/controllers/OrderController.php';
 require_once __DIR__ . '/../app/controllers/AdminController.php';
 
 // Get URL from query string
-$url = isset($_GET['url']) ? rtrim($_GET['url'], '/') : '';
-$url = filter_var($url, FILTER_SANITIZE_URL);
-$url = explode('/', $url);
+// Support both .htaccess (index.php?url=...) and direct PHP server routing (REQUEST_URI)
+if (isset($_GET['url']) && $_GET['url'] !== '') {
+    $rawUrl = rtrim($_GET['url'], '/');
+} else {
+    // Derive path from REQUEST_URI by removing the script base directory (e.g., /codezilla-store/public)
+    $requestPath = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH);
+    $basePath = rtrim(str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME'] ?? '/')), '/');
+    if ($basePath !== '' && $basePath !== '/' && strpos($requestPath, $basePath) === 0) {
+        $requestPath = substr($requestPath, strlen($basePath));
+    }
+    $rawUrl = ltrim($requestPath, '/');
+}
+
+$rawUrl = filter_var($rawUrl, FILTER_SANITIZE_URL);
+$url = $rawUrl === '' ? [] : explode('/', $rawUrl);
 
 // Default route
 $controller = 'HomeController';

@@ -1,13 +1,16 @@
 RewriteEngine On
 
-# Redirect to public folder
-RewriteCond %{REQUEST_URI} !^/public/
-RewriteRule ^(.*)$ /public/$1 [L]
+# Base relative to current directory (auto when in vhost/alias). If in htdocs subdirectory, optionally set:
+# RewriteBase /codezilla-store/
+
+# Avoid double /public in path
+RewriteCond %{REQUEST_URI} !/public/
+RewriteRule ^(.*)$ public/$1 [L]
 
 # Prevent directory listing
 Options -Indexes
 
-# Protect sensitive files
+# Protect hidden files
 <FilesMatch "^\.">
     Order allow,deny
     Deny from all
