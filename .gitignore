@@ -1,0 +1,10 @@
+/vendor/
+/uploads/*
+!/uploads/.gitkeep
+.env
+.env.local
+composer.lock
+.DS_Store
+Thumbs.db
+*.log
+config/env.php

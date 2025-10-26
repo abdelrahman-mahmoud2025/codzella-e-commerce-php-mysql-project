@@ -1,0 +1,936 @@
+<!DOCTYPE html><html><head>
+      <title>دليل_المشروع_الكامل</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\Eng Abdelrhman\.windsurf\extensions\shd101wyy.markdown-preview-enhanced-0.8.19-universal\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="-دليل-بناء-متجر-codezilla-الإلكتروني-من-الصفر">🛒 دليل بناء متجر CodeZilla الإلكتروني من الصفر </h1>
+<hr>
+<h2 id="-المقدمة">📖 المقدمة </h2>
+<p>الملف ده هو دليلك الشامل لبناء مشروع متجر إلكتروني احترافي من الصفر باستخدام <strong>PHP</strong> و <strong>MySQL</strong>.</p>
+<h3 id="-هتتعلم-إيه">🎯 هتتعلم إيه؟ </h3>
+<ul>
+<li>إزاي تبني <strong>نظام MVC</strong> يدوي من الصفر (بدون فريموورك)</li>
+<li>إزاي تتعامل مع <strong>قاعدة بيانات MySQL</strong> بشكل آمن</li>
+<li>إزاي تعمل <strong>نظام تسجيل دخول</strong> و <strong>صلاحيات</strong> (عملاء وأدمن)</li>
+<li>إزاي تبني <strong>سلة تسوق</strong> (Shopping Cart)</li>
+<li>إزاي تتعامل مع <strong>الدفع الإلكتروني</strong> باستخدام Stripe</li>
+<li>إزاي تأمن موقعك ضد <strong>الاختراقات</strong> (SQL Injection, XSS, CSRF)</li>
+</ul>
+<h3 id="️-إيه-هو-المشروع-ده">🏗️ إيه هو المشروع ده؟ </h3>
+<p><strong>CodeZilla Store</strong> هو متجر إلكتروني متكامل فيه:</p>
+<ul>
+<li><strong>واجهة للعملاء</strong>: يقدروا يتصفحوا المنتجات، يضيفوا للسلة، ويشتروا</li>
+<li><strong>لوحة تحكم للأدمن</strong>: إدارة المنتجات، التصنيفات، والطلبات</li>
+<li><strong>نظام طلبات</strong>: متابعة حالة الطلب من البداية للنهاية</li>
+<li><strong>دفع إلكتروني</strong>: تكامل مع Stripe للدفع الآمن</li>
+</ul>
+<hr>
+<h2 id="️-فهم-هيكل-المشروع-البيت-اللي-هنبنيه">🗂️ فهم هيكل المشروع (البيت اللي هنبنيه) </h2>
+<p>تخيل إنك بتبني بيت من 4 طوابق. كل طابق ليه دوره:</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>codezilla-store/              # "البيت الرئيسي"
+│
+├── config/                   # 🔧 "غرفة المحركات" - إعدادات المشروع
+│   ├── env.php              # ملف الإعدادات السرية (باسوورد قاعدة البيانات، مفاتيح Stripe)
+│   ├── env.example.php      # نموذج ملف الإعدادات (للمشاركة مع الفريق)
+│   ├── database.php         # "الموصل" - الاتصال بقاعدة البيانات
+│   └── database.sql         # "المخطط" - تصميم الجداول والبيانات التجريبية
+│
+├── app/                      # 🧠 "العقل المدبر" - كل اللوجيك والكود الأساسي
+│   ├── controllers/         # "المديرين" - بيستقبلوا الطلبات ويوجهوها
+│   │   ├── HomeController.php
+│   │   ├── AuthController.php       # مدير تسجيل الدخول/الخروج
+│   │   ├── ProductController.php    # مدير عرض المنتجات
+│   │   ├── CartController.php       # مدير سلة التسوق
+│   │   ├── OrderController.php      # مدير الطلبات
+│   │   └── AdminController.php      # مدير لوحة التحكم
+│   │
+│   ├── models/              # "المخزن الذكي" - التعامل مع البيانات في قاعدة البيانات
+│   │   ├── User.php         # التعامل مع بيانات المستخدمين
+│   │   ├── Category.php     # التعامل مع التصنيفات
+│   │   ├── Product.php      # التعامل مع المنتجات
+│   │   └── Order.php        # التعامل مع الطلبات
+│   │
+│   └── helpers/             # "صندوق العدة" - أدوات مساعدة
+│       ├── SessionHelper.php        # إدارة الجلسات
+│       ├── ValidationHelper.php     # التحقق من البيانات
+│       ├── CartHelper.php           # عمليات السلة
+│       └── StripeHelper.php         # التعامل مع Stripe
+│
+├── views/                    # 🎨 "الواجهات" - كل اللي المستخدم بيشوفه
+│   ├── layouts/             # القوالب الثابتة (Header, Footer)
+│   ├── home/                # صفحة الرئيسية
+│   ├── auth/                # صفحات تسجيل الدخول والتسجيل
+│   ├── products/            # صفحات المنتجات
+│   ├── cart/                # صفحة السلة
+│   ├── orders/              # صفحات الطلبات
+│   ├── admin/               # صفحات لوحة التحكم
+│   └── errors/              # صفحات الأخطاء (404)
+│
+├── public/                   # 🌐 "الباب الأمامي" - الملفات العامة
+│   ├── index.php            # "البواب" - نقطة دخول المشروع
+│   ├── .htaccess            # قواعد إعادة التوجيه (Clean URLs)
+│   ├── css/                 # ملفات التنسيق
+│   └── js/                  # ملفات JavaScript
+│
+├── uploads/                  # 📁 "المخزن" - الصور المرفوعة
+│
+├── composer.json             # 📦 "قائمة المشتريات" - المكتبات المطلوبة
+└── .htaccess                 # إعدادات Apache الرئيسية
+</code></pre><hr>
+<h2 id="-الجزء-الأول-البداية-من-الصفر">🚀 الجزء الأول: البداية من الصفر </h2>
+<h3 id="-المتطلبات-الأدوات-اللي-محتاجها-قبل-ما-تبدأ">📋 المتطلبات (الأدوات اللي محتاجها قبل ما تبدأ) </h3>
+<h4 id="1-xampp-أو-wamp-أو-mamp">1. <strong>XAMPP</strong> (أو WAMP أو MAMP) </h4>
+<ul>
+<li><strong>إيه ده؟</strong> برنامج بيجيبلك Apache + MySQL + PHP في حزمة واحدة</li>
+<li><strong>تنزله منين؟</strong> <a href="https://www.apachefriends.org">https://www.apachefriends.org</a></li>
+<li><strong>ليه محتاجه؟</strong> عشان تقدر تشغل كود PHP على جهازك</li>
+</ul>
+<h4 id="2-php-80-أو-أعلى">2. <strong>PHP 8.0 أو أعلى</strong> </h4>
+<ul>
+<li>بييجي مع XAMPP عادةً</li>
+<li>للتأكد: افتح CMD واكتب <code>php -v</code></li>
+</ul>
+<h4 id="3-composer">3. <strong>Composer</strong> </h4>
+<ul>
+<li><strong>إيه ده؟</strong> مدير الحزم بتاع PHP</li>
+<li><strong>تنزله منين؟</strong> <a href="https://getcomposer.org">https://getcomposer.org</a></li>
+<li><strong>ليه محتاجه؟</strong> عشان نثبت مكتبة Stripe</li>
+</ul>
+<h4 id="4-محرر-أكواد-vs-code-مثلاً">4. <strong>محرر أكواد</strong> (VS Code مثلاً) </h4>
+<ul>
+<li>تنزله من <a href="https://code.visualstudio.com">https://code.visualstudio.com</a></li>
+</ul>
+<hr>
+<h3 id="️-خطوة-1-تجهيز-بيئة-العمل">🛠️ خطوة 1: تجهيز بيئة العمل </h3>
+<h4 id="تشغيل-xampp">تشغيل XAMPP </h4>
+<ol>
+<li>افتح XAMPP Control Panel</li>
+<li>شغّل Apache (اضغط Start)</li>
+<li>شغّل MySQL (اضغط Start)</li>
+<li>لو الاتنين شغالين يبقى تمام ✅</li>
+</ol>
+<h4 id="تجهيز-المجلد">تجهيز المجلد </h4>
+<ol>
+<li>روح <code>C:\xampp\htdocs\</code></li>
+<li>اعمل مجلد اسمه <code>codezilla-store</code></li>
+<li>افتحه في VS Code</li>
+</ol>
+<hr>
+<h3 id="-خطوة-2-إنشاء-هيكل-المجلدات">📂 خطوة 2: إنشاء هيكل المجلدات </h3>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token builtin class-name">cd</span> C:<span class="token punctuation">\</span>xampp<span class="token punctuation">\</span>htdocs<span class="token punctuation">\</span>codezilla-store
+
+<span class="token comment"># المجلدات الرئيسية</span>
+<span class="token function">mkdir</span> app config public views uploads
+
+<span class="token comment"># مجلدات app</span>
+<span class="token function">mkdir</span> app<span class="token punctuation">\</span>controllers app<span class="token punctuation">\</span>models app<span class="token punctuation">\</span>helpers
+
+<span class="token comment"># مجلدات views</span>
+<span class="token function">mkdir</span> views<span class="token punctuation">\</span>layouts views<span class="token punctuation">\</span>home views<span class="token punctuation">\</span>auth views<span class="token punctuation">\</span>products
+<span class="token function">mkdir</span> views<span class="token punctuation">\</span>cart views<span class="token punctuation">\</span>orders views<span class="token punctuation">\</span>admin views<span class="token punctuation">\</span>errors
+
+<span class="token comment"># مجلدات admin</span>
+<span class="token function">mkdir</span> views<span class="token punctuation">\</span>admin<span class="token punctuation">\</span>products views<span class="token punctuation">\</span>admin<span class="token punctuation">\</span>orders views<span class="token punctuation">\</span>admin<span class="token punctuation">\</span>categories
+
+<span class="token comment"># مجلدات public</span>
+<span class="token function">mkdir</span> public<span class="token punctuation">\</span>css public<span class="token punctuation">\</span>js
+</code></pre><hr>
+<h2 id="️-الجزء-الثاني-قاعدة-البيانات">🗄️ الجزء الثاني: قاعدة البيانات </h2>
+<h3 id="خطوة-3-إنشاء-قاعدة-البيانات">خطوة 3: إنشاء قاعدة البيانات </h3>
+<h4 id="أ-افتح-phpmyadmin">أ) افتح phpMyAdmin </h4>
+<ol>
+<li>في المتصفح: <code>http://localhost/phpmyadmin</code></li>
+<li>اضغط "New" من الجانب</li>
+<li>اسم القاعدة: <code>codezilla_store</code></li>
+<li>Collation: <code>utf8mb4_unicode_ci</code></li>
+<li>اضغط Create ✅</li>
+</ol>
+<h4 id="ب-تنفيذ-ملف-sql">ب) تنفيذ ملف SQL </h4>
+<p>اعمل ملف <code>config/database.sql</code> بالكود ده (ملخص):</p>
+<p><strong>الجداول المطلوبة:</strong></p>
+<ul>
+<li><code>users</code> - المستخدمين (عملاء وأدمن)</li>
+<li><code>categories</code> - التصنيفات</li>
+<li><code>products</code> - المنتجات</li>
+<li><code>orders</code> - الطلبات</li>
+<li><code>order_items</code> - تفاصيل كل طلب</li>
+</ul>
+<p><strong>طريقة التنفيذ:</strong></p>
+<ol>
+<li>في phpMyAdmin اختار <code>codezilla_store</code></li>
+<li>تاب "SQL"</li>
+<li>انسخ محتوى الملف <code>config/database.sql</code> الموجود في المشروع</li>
+<li>اضغط "Go" ✅</li>
+</ol>
+<p><strong>بيانات تجريبية هتتضاف:</strong></p>
+<ul>
+<li>أدمن: <code>admin@codezilla.com</code> / <code>admin123</code></li>
+<li>4 تصنيفات</li>
+<li>4 منتجات تجريبية</li>
+</ul>
+<hr>
+<h2 id="️-الجزء-الثالث-ملفات-الإعدادات">⚙️ الجزء الثالث: ملفات الإعدادات </h2>
+<h3 id="خطوة-4-ملف-الإعدادات-configenvphp">خطوة 4: ملف الإعدادات <code>config/env.php</code> </h3>
+<pre data-role="codeBlock" data-info="php" class="language-php php"><code><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
+<span class="token function">define</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'DB_HOST'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'localhost'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">define</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'DB_NAME'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'codezilla_store'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">define</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'DB_USER'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'root'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">define</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'DB_PASS'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">define</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'DB_CHARSET'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'utf8mb4'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">define</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'APP_NAME'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'CodeZilla Store'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">define</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'APP_URL'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'http://localhost/codezilla-store/public'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">define</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'APP_ENV'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'development'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">define</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'STRIPE_PUBLIC_KEY'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'pk_test_YOUR_KEY'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">define</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'STRIPE_SECRET_KEY'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'sk_test_YOUR_KEY'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">define</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'SESSION_LIFETIME'</span><span class="token punctuation">,</span> <span class="token number">7200</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">define</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'UPLOAD_DIR'</span><span class="token punctuation">,</span> <span class="token constant">__DIR__</span> <span class="token operator">.</span> <span class="token string single-quoted-string">'/../uploads/'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">define</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'MAX_FILE_SIZE'</span><span class="token punctuation">,</span> <span class="token number">5242880</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">define</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'ALLOWED_EXTENSIONS'</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string single-quoted-string">'jpg'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'jpeg'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'png'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'gif'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'webp'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">define</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'CSRF_TOKEN_NAME'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'csrf_token'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">define</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'PASSWORD_MIN_LENGTH'</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span></code></pre><hr>
+<h3 id="خطوة-5-ملف-الاتصال-configdatabasephp">خطوة 5: ملف الاتصال <code>config/database.php</code> </h3>
+<p><strong>شرح الفكرة:</strong> ده الملف اللي بيتصل بقاعدة البيانات. بنستخدم <strong>Singleton Pattern</strong> عشان يكون فيه اتصال واحد بس.</p>
+<pre data-role="codeBlock" data-info="php" class="language-php php"><code><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
+<span class="token keyword keyword-class">class</span> <span class="token class-name-definition class-name">Database</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-private">private</span> <span class="token keyword keyword-static">static</span> <span class="token variable">$instance</span> <span class="token operator">=</span> <span class="token constant">null</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-private">private</span> <span class="token variable">$connection</span><span class="token punctuation">;</span>
+
+    <span class="token keyword keyword-private">private</span> <span class="token keyword keyword-function">function</span> <span class="token function-definition function">__construct</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword keyword-try">try</span> <span class="token punctuation">{</span>
+            <span class="token variable">$dsn</span> <span class="token operator">=</span> <span class="token string double-quoted-string">"mysql:host="</span> <span class="token operator">.</span> <span class="token constant">DB_HOST</span> <span class="token operator">.</span> <span class="token string double-quoted-string">";dbname="</span> <span class="token operator">.</span> <span class="token constant">DB_NAME</span> <span class="token operator">.</span> <span class="token string double-quoted-string">";charset="</span> <span class="token operator">.</span> <span class="token constant">DB_CHARSET</span><span class="token punctuation">;</span>
+            <span class="token variable">$options</span> <span class="token operator">=</span> <span class="token punctuation">[</span>
+                <span class="token scope">PDO<span class="token punctuation">::</span></span><span class="token constant">ATTR_ERRMODE</span> <span class="token operator">=&gt;</span> <span class="token scope">PDO<span class="token punctuation">::</span></span><span class="token constant">ERRMODE_EXCEPTION</span><span class="token punctuation">,</span>
+                <span class="token scope">PDO<span class="token punctuation">::</span></span><span class="token constant">ATTR_DEFAULT_FETCH_MODE</span> <span class="token operator">=&gt;</span> <span class="token scope">PDO<span class="token punctuation">::</span></span><span class="token constant">FETCH_ASSOC</span><span class="token punctuation">,</span>
+                <span class="token scope">PDO<span class="token punctuation">::</span></span><span class="token constant">ATTR_EMULATE_PREPARES</span> <span class="token operator">=&gt;</span> <span class="token constant boolean">false</span><span class="token punctuation">,</span>
+            <span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token this keyword">$this</span><span class="token operator">-&gt;</span><span class="token property">connection</span> <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">PDO</span><span class="token punctuation">(</span><span class="token variable">$dsn</span><span class="token punctuation">,</span> <span class="token constant">DB_USER</span><span class="token punctuation">,</span> <span class="token constant">DB_PASS</span><span class="token punctuation">,</span> <span class="token variable">$options</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword keyword-catch">catch</span> <span class="token punctuation">(</span><span class="token class-name">PDOException</span> <span class="token variable">$e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword keyword-die">die</span><span class="token punctuation">(</span><span class="token string double-quoted-string">"فشل الاتصال: "</span> <span class="token operator">.</span> <span class="token variable">$e</span><span class="token operator">-&gt;</span><span class="token function">getMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-function">function</span> <span class="token function-definition function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token scope"><span class="token keyword keyword-self">self</span><span class="token punctuation">::</span></span><span class="token variable">$instance</span> <span class="token operator">===</span> <span class="token constant">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token scope"><span class="token keyword keyword-self">self</span><span class="token punctuation">::</span></span><span class="token variable">$instance</span> <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token keyword keyword-self">self</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword keyword-return">return</span> <span class="token scope"><span class="token keyword keyword-self">self</span><span class="token punctuation">::</span></span><span class="token variable">$instance</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-function">function</span> <span class="token function-definition function">getConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword keyword-return">return</span> <span class="token this keyword">$this</span><span class="token operator">-&gt;</span><span class="token property">connection</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-private">private</span> <span class="token keyword keyword-function">function</span> <span class="token function-definition function">__clone</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</span></code></pre><p><strong>استخدام الكلاس:</strong></p>
+<pre data-role="codeBlock" data-info="php" class="language-php php"><code><span class="token variable">$db</span> <span class="token operator">=</span> <span class="token scope">Database<span class="token punctuation">::</span></span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$conn</span> <span class="token operator">=</span> <span class="token variable">$db</span><span class="token operator">-&gt;</span><span class="token function">getConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><hr>
+<h2 id="-الجزء-الرابع-نقطة-الدخول-البواب">🚪 الجزء الرابع: نقطة الدخول (البواب) </h2>
+<h3 id="خطوة-6-ملف-publicindexphp">خطوة 6: ملف <code>public/index.php</code> </h3>
+<p>ده <strong>أهم ملف</strong> في المشروع! كل الطلبات بتمر عليه.</p>
+<p><strong>الفكرة:</strong></p>
+<ul>
+<li>لما المستخدم يكتب <code>/products</code> → البواب يوجهه لـ ProductController</li>
+<li>لما يكتب <code>/cart/add</code> → يوجهه لـ CartController والدالة add</li>
+</ul>
+<pre data-role="codeBlock" data-info="php" class="language-php php"><code><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
+<span class="token function">session_start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// تحميل الإعدادات</span>
+<span class="token keyword keyword-require_once">require_once</span> <span class="token constant">__DIR__</span> <span class="token operator">.</span> <span class="token string single-quoted-string">'/../config/env.php'</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-require_once">require_once</span> <span class="token constant">__DIR__</span> <span class="token operator">.</span> <span class="token string single-quoted-string">'/../config/database.php'</span><span class="token punctuation">;</span>
+
+<span class="token comment">// تحميل الـ Helpers</span>
+<span class="token keyword keyword-require_once">require_once</span> <span class="token constant">__DIR__</span> <span class="token operator">.</span> <span class="token string single-quoted-string">'/../app/helpers/SessionHelper.php'</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-require_once">require_once</span> <span class="token constant">__DIR__</span> <span class="token operator">.</span> <span class="token string single-quoted-string">'/../app/helpers/ValidationHelper.php'</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-require_once">require_once</span> <span class="token constant">__DIR__</span> <span class="token operator">.</span> <span class="token string single-quoted-string">'/../app/helpers/CartHelper.php'</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-require_once">require_once</span> <span class="token constant">__DIR__</span> <span class="token operator">.</span> <span class="token string single-quoted-string">'/../app/helpers/StripeHelper.php'</span><span class="token punctuation">;</span>
+
+<span class="token comment">// تحميل الـ Models</span>
+<span class="token keyword keyword-require_once">require_once</span> <span class="token constant">__DIR__</span> <span class="token operator">.</span> <span class="token string single-quoted-string">'/../app/models/User.php'</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-require_once">require_once</span> <span class="token constant">__DIR__</span> <span class="token operator">.</span> <span class="token string single-quoted-string">'/../app/models/Category.php'</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-require_once">require_once</span> <span class="token constant">__DIR__</span> <span class="token operator">.</span> <span class="token string single-quoted-string">'/../app/models/Product.php'</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-require_once">require_once</span> <span class="token constant">__DIR__</span> <span class="token operator">.</span> <span class="token string single-quoted-string">'/../app/models/Order.php'</span><span class="token punctuation">;</span>
+
+<span class="token comment">// تحميل الـ Controllers</span>
+<span class="token keyword keyword-require_once">require_once</span> <span class="token constant">__DIR__</span> <span class="token operator">.</span> <span class="token string single-quoted-string">'/../app/controllers/HomeController.php'</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-require_once">require_once</span> <span class="token constant">__DIR__</span> <span class="token operator">.</span> <span class="token string single-quoted-string">'/../app/controllers/AuthController.php'</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-require_once">require_once</span> <span class="token constant">__DIR__</span> <span class="token operator">.</span> <span class="token string single-quoted-string">'/../app/controllers/ProductController.php'</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-require_once">require_once</span> <span class="token constant">__DIR__</span> <span class="token operator">.</span> <span class="token string single-quoted-string">'/../app/controllers/CartController.php'</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-require_once">require_once</span> <span class="token constant">__DIR__</span> <span class="token operator">.</span> <span class="token string single-quoted-string">'/../app/controllers/OrderController.php'</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-require_once">require_once</span> <span class="token constant">__DIR__</span> <span class="token operator">.</span> <span class="token string single-quoted-string">'/../app/controllers/AdminController.php'</span><span class="token punctuation">;</span>
+
+<span class="token comment">// قراءة الـ URL</span>
+<span class="token variable">$url</span> <span class="token operator">=</span> <span class="token keyword keyword-isset">isset</span><span class="token punctuation">(</span><span class="token global">$_GET</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'url'</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token function">rtrim</span><span class="token punctuation">(</span><span class="token global">$_GET</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'url'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'/'</span><span class="token punctuation">)</span> <span class="token punctuation">:</span> <span class="token string single-quoted-string">''</span><span class="token punctuation">;</span>
+<span class="token variable">$url</span> <span class="token operator">=</span> <span class="token function">filter_var</span><span class="token punctuation">(</span><span class="token variable">$url</span><span class="token punctuation">,</span> <span class="token constant">FILTER_SANITIZE_URL</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$url</span> <span class="token operator">=</span> <span class="token function">explode</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'/'</span><span class="token punctuation">,</span> <span class="token variable">$url</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// القيم الافتراضية</span>
+<span class="token variable">$controller</span> <span class="token operator">=</span> <span class="token string single-quoted-string">'HomeController'</span><span class="token punctuation">;</span>
+<span class="token variable">$method</span> <span class="token operator">=</span> <span class="token string single-quoted-string">'index'</span><span class="token punctuation">;</span>
+<span class="token variable">$params</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token comment">// توجيه الطلبات</span>
+<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token keyword keyword-empty">empty</span><span class="token punctuation">(</span><span class="token variable">$url</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-switch">switch</span> <span class="token punctuation">(</span><span class="token variable">$url</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword keyword-case">case</span> <span class="token string single-quoted-string">'login'</span><span class="token punctuation">:</span>
+            <span class="token variable">$controller</span> <span class="token operator">=</span> <span class="token string single-quoted-string">'AuthController'</span><span class="token punctuation">;</span>
+            <span class="token variable">$method</span> <span class="token operator">=</span> <span class="token string single-quoted-string">'login'</span><span class="token punctuation">;</span>
+            <span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-case">case</span> <span class="token string single-quoted-string">'register'</span><span class="token punctuation">:</span>
+            <span class="token variable">$controller</span> <span class="token operator">=</span> <span class="token string single-quoted-string">'AuthController'</span><span class="token punctuation">;</span>
+            <span class="token variable">$method</span> <span class="token operator">=</span> <span class="token string single-quoted-string">'register'</span><span class="token punctuation">;</span>
+            <span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-case">case</span> <span class="token string single-quoted-string">'logout'</span><span class="token punctuation">:</span>
+            <span class="token variable">$controller</span> <span class="token operator">=</span> <span class="token string single-quoted-string">'AuthController'</span><span class="token punctuation">;</span>
+            <span class="token variable">$method</span> <span class="token operator">=</span> <span class="token string single-quoted-string">'logout'</span><span class="token punctuation">;</span>
+            <span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-case">case</span> <span class="token string single-quoted-string">'products'</span><span class="token punctuation">:</span>
+            <span class="token variable">$controller</span> <span class="token operator">=</span> <span class="token string single-quoted-string">'ProductController'</span><span class="token punctuation">;</span>
+            <span class="token variable">$method</span> <span class="token operator">=</span> <span class="token keyword keyword-isset">isset</span><span class="token punctuation">(</span><span class="token variable">$url</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token variable">$url</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token punctuation">:</span> <span class="token string single-quoted-string">'index'</span><span class="token punctuation">;</span>
+            <span class="token variable">$params</span> <span class="token operator">=</span> <span class="token function">array_slice</span><span class="token punctuation">(</span><span class="token variable">$url</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-case">case</span> <span class="token string single-quoted-string">'cart'</span><span class="token punctuation">:</span>
+            <span class="token variable">$controller</span> <span class="token operator">=</span> <span class="token string single-quoted-string">'CartController'</span><span class="token punctuation">;</span>
+            <span class="token variable">$method</span> <span class="token operator">=</span> <span class="token keyword keyword-isset">isset</span><span class="token punctuation">(</span><span class="token variable">$url</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token variable">$url</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token punctuation">:</span> <span class="token string single-quoted-string">'index'</span><span class="token punctuation">;</span>
+            <span class="token variable">$params</span> <span class="token operator">=</span> <span class="token function">array_slice</span><span class="token punctuation">(</span><span class="token variable">$url</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-case">case</span> <span class="token string single-quoted-string">'orders'</span><span class="token punctuation">:</span>
+            <span class="token variable">$controller</span> <span class="token operator">=</span> <span class="token string single-quoted-string">'OrderController'</span><span class="token punctuation">;</span>
+            <span class="token variable">$method</span> <span class="token operator">=</span> <span class="token keyword keyword-isset">isset</span><span class="token punctuation">(</span><span class="token variable">$url</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token variable">$url</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token punctuation">:</span> <span class="token string single-quoted-string">'index'</span><span class="token punctuation">;</span>
+            <span class="token variable">$params</span> <span class="token operator">=</span> <span class="token function">array_slice</span><span class="token punctuation">(</span><span class="token variable">$url</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-case">case</span> <span class="token string single-quoted-string">'admin'</span><span class="token punctuation">:</span>
+            <span class="token variable">$controller</span> <span class="token operator">=</span> <span class="token string single-quoted-string">'AdminController'</span><span class="token punctuation">;</span>
+            <span class="token variable">$method</span> <span class="token operator">=</span> <span class="token keyword keyword-isset">isset</span><span class="token punctuation">(</span><span class="token variable">$url</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token variable">$url</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token punctuation">:</span> <span class="token string single-quoted-string">'dashboard'</span><span class="token punctuation">;</span>
+            <span class="token variable">$params</span> <span class="token operator">=</span> <span class="token function">array_slice</span><span class="token punctuation">(</span><span class="token variable">$url</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-default">default</span><span class="token punctuation">:</span>
+            <span class="token variable">$controller</span> <span class="token operator">=</span> <span class="token string single-quoted-string">'HomeController'</span><span class="token punctuation">;</span>
+            <span class="token variable">$method</span> <span class="token operator">=</span> <span class="token string single-quoted-string">'notFound'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// تشغيل الـ Controller</span>
+<span class="token keyword keyword-try">try</span> <span class="token punctuation">{</span>
+    <span class="token variable">$controllerInstance</span> <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token variable">$controller</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token function">method_exists</span><span class="token punctuation">(</span><span class="token variable">$controllerInstance</span><span class="token punctuation">,</span> <span class="token variable">$method</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">call_user_func_array</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token variable">$controllerInstance</span><span class="token punctuation">,</span> <span class="token variable">$method</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token variable">$params</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword keyword-else">else</span> <span class="token punctuation">{</span>
+        <span class="token variable">$homeController</span> <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">HomeController</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token variable">$homeController</span><span class="token operator">-&gt;</span><span class="token function">notFound</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span> <span class="token keyword keyword-catch">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> <span class="token variable">$e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token constant">APP_ENV</span> <span class="token operator">===</span> <span class="token string single-quoted-string">'development'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword keyword-die">die</span><span class="token punctuation">(</span><span class="token string double-quoted-string">"Error: "</span> <span class="token operator">.</span> <span class="token variable">$e</span><span class="token operator">-&gt;</span><span class="token function">getMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword keyword-else">else</span> <span class="token punctuation">{</span>
+        <span class="token keyword keyword-die">die</span><span class="token punctuation">(</span><span class="token string double-quoted-string">"حدث خطأ. حاول مرة أخرى."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</span></code></pre><hr>
+<h3 id="خطوة-7-ملف-publichtaccess">خطوة 7: ملف <code>public/.htaccess</code> </h3>
+<p>ده ملف بيخلي الروابط نضيفة (بدون <code>?url=</code>)</p>
+<pre data-role="codeBlock" data-info="apache" class="language-apache apache"><code>RewriteEngine On
+RewriteBase /codezilla-store/public/
+
+# لو الملف أو المجلد موجود، اعرضه
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# لو مش موجود، وجّه لـ index.php
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+</code></pre><p><strong>النتيجة:</strong></p>
+<ul>
+<li>بدلاً من: <code>index.php?url=products/show/1</code></li>
+<li>هيبقى: <code>/products/show/1</code> ✨</li>
+</ul>
+<hr>
+<h2 id="-الجزء-الخامس-فهم-نمط-mvc">🧠 الجزء الخامس: فهم نمط MVC </h2>
+<h3 id="ما-هو-mvc">ما هو MVC؟ </h3>
+<p><strong>MVC</strong> = Model + View + Controller</p>
+<p><strong>تشبيه المطعم:</strong></p>
+<ul>
+<li><strong>Model</strong> (النادل): يروح للمطبخ (قاعدة البيانات) يجيب الطلب</li>
+<li><strong>View</strong> (الطبق): الشكل النهائي اللي بيتقدم للزبون</li>
+<li><strong>Controller</strong> (المدير): يستقبل طلب الزبون ويوجه النادل</li>
+</ul>
+<p><strong>مثال عملي:</strong> لما المستخدم يطلب <code>/products</code>:</p>
+<ol>
+<li><strong>Controller</strong> يستقبل الطلب</li>
+<li><strong>Model</strong> يجيب المنتجات من قاعدة البيانات</li>
+<li><strong>View</strong> يعرض المنتجات بشكل جميل</li>
+</ol>
+<hr>
+<h2 id="-الجزء-السادس-الـ-models">📦 الجزء السادس: الـ Models </h2>
+<h3 id="خطوة-8-user-model-مثال">خطوة 8: User Model (مثال) </h3>
+<p>الـ Model مسؤول عن التعامل مع قاعدة البيانات فقط.</p>
+<p><strong>الوظائف الأساسية:</strong></p>
+<ul>
+<li><code>getAll()</code> - جلب كل السجلات</li>
+<li><code>getById($id)</code> - جلب سجل واحد</li>
+<li><code>create($data)</code> - إضافة سجل جديد</li>
+<li><code>update($id, $data)</code> - تحديث سجل</li>
+<li><code>delete($id)</code> - حذف سجل</li>
+</ul>
+<p><strong>نقاط مهمة:</strong></p>
+<ul>
+<li>✅ استخدم <strong>Prepared Statements</strong> دائماً (حماية من SQL Injection)</li>
+<li>✅ استخدم <code>password_hash()</code> لتشفير كلمات المرور</li>
+<li>✅ استخدم <code>password_verify()</code> للتحقق من كلمة المرور</li>
+</ul>
+<hr>
+<h2 id="-الجزء-السابع-الـ-controllers">🎮 الجزء السابع: الـ Controllers </h2>
+<h3 id="خطوة-9-homecontroller">خطوة 9: HomeController </h3>
+<pre data-role="codeBlock" data-info="php" class="language-php php"><code><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
+<span class="token keyword keyword-class">class</span> <span class="token class-name-definition class-name">HomeController</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-private">private</span> <span class="token variable">$productModel</span><span class="token punctuation">;</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-function">function</span> <span class="token function-definition function">__construct</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token this keyword">$this</span><span class="token operator">-&gt;</span><span class="token property">productModel</span> <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Product</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-function">function</span> <span class="token function-definition function">index</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token variable">$featuredProducts</span> <span class="token operator">=</span> <span class="token this keyword">$this</span><span class="token operator">-&gt;</span><span class="token property">productModel</span><span class="token operator">-&gt;</span><span class="token function">getFeatured</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token variable">$latestProducts</span> <span class="token operator">=</span> <span class="token this keyword">$this</span><span class="token operator">-&gt;</span><span class="token property">productModel</span><span class="token operator">-&gt;</span><span class="token function">getAll</span><span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword keyword-require_once">require_once</span> <span class="token constant">__DIR__</span> <span class="token operator">.</span> <span class="token string single-quoted-string">'/../../views/layouts/header.php'</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-require_once">require_once</span> <span class="token constant">__DIR__</span> <span class="token operator">.</span> <span class="token string single-quoted-string">'/../../views/home/index.php'</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-require_once">require_once</span> <span class="token constant">__DIR__</span> <span class="token operator">.</span> <span class="token string single-quoted-string">'/../../views/layouts/footer.php'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-function">function</span> <span class="token function-definition function">notFound</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">http_response_code</span><span class="token punctuation">(</span><span class="token number">404</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-require_once">require_once</span> <span class="token constant">__DIR__</span> <span class="token operator">.</span> <span class="token string single-quoted-string">'/../../views/errors/404.php'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</span></code></pre><p><strong>شرح:</strong></p>
+<ul>
+<li><code>__construct()</code>: ينفذ أول ما ننشئ الكائن</li>
+<li><code>index()</code>: الدالة الافتراضية للصفحة الرئيسية</li>
+<li>نستدعي الـ Model نجيب البيانات</li>
+<li>نستدعي الـ Views نعرض البيانات</li>
+</ul>
+<hr>
+<h3 id="خطوة-10-authcontroller-تسجيل-الدخول">خطوة 10: AuthController (تسجيل الدخول) </h3>
+<pre data-role="codeBlock" data-info="php" class="language-php php"><code><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
+<span class="token keyword keyword-class">class</span> <span class="token class-name-definition class-name">AuthController</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-private">private</span> <span class="token variable">$userModel</span><span class="token punctuation">;</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-function">function</span> <span class="token function-definition function">__construct</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token this keyword">$this</span><span class="token operator">-&gt;</span><span class="token property">userModel</span> <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">User</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-function">function</span> <span class="token function-definition function">login</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token global">$_SERVER</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'REQUEST_METHOD'</span><span class="token punctuation">]</span> <span class="token operator">===</span> <span class="token string single-quoted-string">'POST'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token variable">$email</span> <span class="token operator">=</span> <span class="token global">$_POST</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'email'</span><span class="token punctuation">]</span> <span class="token operator">??</span> <span class="token string single-quoted-string">''</span><span class="token punctuation">;</span>
+            <span class="token variable">$password</span> <span class="token operator">=</span> <span class="token global">$_POST</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'password'</span><span class="token punctuation">]</span> <span class="token operator">??</span> <span class="token string single-quoted-string">''</span><span class="token punctuation">;</span>
+
+            <span class="token variable">$user</span> <span class="token operator">=</span> <span class="token this keyword">$this</span><span class="token operator">-&gt;</span><span class="token property">userModel</span><span class="token operator">-&gt;</span><span class="token function">login</span><span class="token punctuation">(</span><span class="token variable">$email</span><span class="token punctuation">,</span> <span class="token variable">$password</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token variable">$user</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token global">$_SESSION</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'user_id'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token variable">$user</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'id'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+                <span class="token global">$_SESSION</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'user_name'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token variable">$user</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'full_name'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+                <span class="token global">$_SESSION</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'user_role'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token variable">$user</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'role'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+                
+                <span class="token function">header</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'Location: '</span> <span class="token operator">.</span> <span class="token constant">APP_URL</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword keyword-exit">exit</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword keyword-else">else</span> <span class="token punctuation">{</span>
+                <span class="token variable">$error</span> <span class="token operator">=</span> <span class="token string single-quoted-string">'البريد أو كلمة المرور غير صحيحة'</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword keyword-require_once">require_once</span> <span class="token constant">__DIR__</span> <span class="token operator">.</span> <span class="token string single-quoted-string">'/../../views/auth/login.php'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-function">function</span> <span class="token function-definition function">logout</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">session_destroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">header</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'Location: '</span> <span class="token operator">.</span> <span class="token constant">APP_URL</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-exit">exit</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</span></code></pre><p><strong>شرح:</strong></p>
+<ul>
+<li>نتحقق من الـ Method (POST أو GET)</li>
+<li>لو POST: نعالج البيانات</li>
+<li>لو GET: نعرض الفورم</li>
+<li>بعد النجاح: نحفظ البيانات في الـ Session</li>
+</ul>
+<hr>
+<h2 id="-الجزء-الثامن-الـ-views-الواجهات">🎨 الجزء الثامن: الـ Views (الواجهات) </h2>
+<h3 id="خطوة-11-header-layout">خطوة 11: Header Layout </h3>
+<p>ملف <code>views/layouts/header.php</code>:</p>
+<pre data-role="codeBlock" data-info="php" class="language-php php"><code><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>ar<span class="token punctuation">"</span></span> <span class="token attr-name">dir</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>rtl<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>width=device-width, initial-scale=1.0<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span><span class="token php language-php"><span class="token delimiter important">&lt;?=</span> <span class="token constant">APP_NAME</span> <span class="token delimiter important">?&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token php language-php"><span class="token delimiter important">&lt;?=</span> <span class="token constant">APP_URL</span> <span class="token delimiter important">?&gt;</span></span>/css/style.css<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nav</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>navbar<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>container<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token php language-php"><span class="token delimiter important">&lt;?=</span> <span class="token constant">APP_URL</span> <span class="token delimiter important">?&gt;</span></span><span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>logo<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token php language-php"><span class="token delimiter important">&lt;?=</span> <span class="token constant">APP_NAME</span> <span class="token delimiter important">?&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nav-links<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token php language-php"><span class="token delimiter important">&lt;?=</span> <span class="token constant">APP_URL</span> <span class="token delimiter important">?&gt;</span></span><span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>الرئيسية<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token php language-php"><span class="token delimiter important">&lt;?=</span> <span class="token constant">APP_URL</span> <span class="token delimiter important">?&gt;</span></span>/products<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>المنتجات<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+                
+                <span class="token php language-php"><span class="token delimiter important">&lt;?php</span> <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token keyword keyword-isset">isset</span><span class="token punctuation">(</span><span class="token global">$_SESSION</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'user_id'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token delimiter important">?&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token php language-php"><span class="token delimiter important">&lt;?=</span> <span class="token constant">APP_URL</span> <span class="token delimiter important">?&gt;</span></span>/cart<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>السلة<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token php language-php"><span class="token delimiter important">&lt;?=</span> <span class="token constant">APP_URL</span> <span class="token delimiter important">?&gt;</span></span>/orders<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>طلباتي<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+                    
+                    <span class="token php language-php"><span class="token delimiter important">&lt;?php</span> <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token global">$_SESSION</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'user_role'</span><span class="token punctuation">]</span> <span class="token operator">===</span> <span class="token string single-quoted-string">'admin'</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token delimiter important">?&gt;</span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token php language-php"><span class="token delimiter important">&lt;?=</span> <span class="token constant">APP_URL</span> <span class="token delimiter important">?&gt;</span></span>/admin<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>لوحة التحكم<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token php language-php"><span class="token delimiter important">&lt;?php</span> <span class="token keyword keyword-endif">endif</span><span class="token punctuation">;</span> <span class="token delimiter important">?&gt;</span></span>
+                    
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token php language-php"><span class="token delimiter important">&lt;?=</span> <span class="token constant">APP_URL</span> <span class="token delimiter important">?&gt;</span></span>/logout<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>تسجيل خروج<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+                <span class="token php language-php"><span class="token delimiter important">&lt;?php</span> <span class="token keyword keyword-else">else</span><span class="token punctuation">:</span> <span class="token delimiter important">?&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token php language-php"><span class="token delimiter important">&lt;?=</span> <span class="token constant">APP_URL</span> <span class="token delimiter important">?&gt;</span></span>/login<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>تسجيل دخول<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token php language-php"><span class="token delimiter important">&lt;?=</span> <span class="token constant">APP_URL</span> <span class="token delimiter important">?&gt;</span></span>/register<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>إنشاء حساب<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+                <span class="token php language-php"><span class="token delimiter important">&lt;?php</span> <span class="token keyword keyword-endif">endif</span><span class="token punctuation">;</span> <span class="token delimiter important">?&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nav</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>main</span><span class="token punctuation">&gt;</span></span>
+</code></pre><hr>
+<h3 id="خطوة-12-صفحة-تسجيل-الدخول">خطوة 12: صفحة تسجيل الدخول </h3>
+<p>ملف <code>views/auth/login.php</code>:</p>
+<pre data-role="codeBlock" data-info="php" class="language-php php"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>auth-container<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">method</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>POST<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>auth-form<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span>تسجيل الدخول<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span>
+        
+        <span class="token php language-php"><span class="token delimiter important">&lt;?php</span> <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token keyword keyword-isset">isset</span><span class="token punctuation">(</span><span class="token variable">$error</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token delimiter important">?&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>alert alert-error<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token php language-php"><span class="token delimiter important">&lt;?=</span> <span class="token function">htmlspecialchars</span><span class="token punctuation">(</span><span class="token variable">$error</span><span class="token punctuation">)</span> <span class="token delimiter important">?&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+        <span class="token php language-php"><span class="token delimiter important">&lt;?php</span> <span class="token keyword keyword-endif">endif</span><span class="token punctuation">;</span> <span class="token delimiter important">?&gt;</span></span>
+        
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>form-group<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span><span class="token punctuation">&gt;</span></span>البريد الإلكتروني<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>email<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>email<span class="token punctuation">"</span></span> <span class="token attr-name">required</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+        
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>form-group<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span><span class="token punctuation">&gt;</span></span>كلمة المرور<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>password<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>password<span class="token punctuation">"</span></span> <span class="token attr-name">required</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+        
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>submit<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-primary<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>دخول<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+        
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>ليس لديك حساب؟ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token php language-php"><span class="token delimiter important">&lt;?=</span> <span class="token constant">APP_URL</span> <span class="token delimiter important">?&gt;</span></span>/register<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>سجل الآن<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p><strong>نقاط الأمان:</strong></p>
+<ul>
+<li>✅ استخدم <code>htmlspecialchars()</code> لعرض أي نص من المستخدم (حماية من XSS)</li>
+<li>✅ استخدم <code>method="POST"</code> للبيانات الحساسة</li>
+<li>✅ أضف <code>required</code> في الحقول المطلوبة</li>
+</ul>
+<hr>
+<h2 id="️-الجزء-التاسع-الـ-helpers-الأدوات-المساعدة">🛡️ الجزء التاسع: الـ Helpers (الأدوات المساعدة) </h2>
+<h3 id="خطوة-13-sessionhelper">خطوة 13: SessionHelper </h3>
+<p>ملف <code>app/helpers/SessionHelper.php</code>:</p>
+<pre data-role="codeBlock" data-info="php" class="language-php php"><code><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
+<span class="token keyword keyword-class">class</span> <span class="token class-name-definition class-name">SessionHelper</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-function">function</span> <span class="token function-definition function">set</span><span class="token punctuation">(</span><span class="token variable">$key</span><span class="token punctuation">,</span> <span class="token variable">$value</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token global">$_SESSION</span><span class="token punctuation">[</span><span class="token variable">$key</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token variable">$value</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-function">function</span> <span class="token function-definition function">get</span><span class="token punctuation">(</span><span class="token variable">$key</span><span class="token punctuation">,</span> <span class="token variable">$default</span> <span class="token operator">=</span> <span class="token constant">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword keyword-return">return</span> <span class="token global">$_SESSION</span><span class="token punctuation">[</span><span class="token variable">$key</span><span class="token punctuation">]</span> <span class="token operator">??</span> <span class="token variable">$default</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-function">function</span> <span class="token function-definition function">has</span><span class="token punctuation">(</span><span class="token variable">$key</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword keyword-return">return</span> <span class="token keyword keyword-isset">isset</span><span class="token punctuation">(</span><span class="token global">$_SESSION</span><span class="token punctuation">[</span><span class="token variable">$key</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-function">function</span> <span class="token function-definition function">delete</span><span class="token punctuation">(</span><span class="token variable">$key</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword keyword-unset">unset</span><span class="token punctuation">(</span><span class="token global">$_SESSION</span><span class="token punctuation">[</span><span class="token variable">$key</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-function">function</span> <span class="token function-definition function">destroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">session_destroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-function">function</span> <span class="token function-definition function">isLoggedIn</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword keyword-return">return</span> <span class="token scope"><span class="token keyword keyword-self">self</span><span class="token punctuation">::</span></span><span class="token function">has</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'user_id'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-function">function</span> <span class="token function-definition function">isAdmin</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword keyword-return">return</span> <span class="token scope"><span class="token keyword keyword-self">self</span><span class="token punctuation">::</span></span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'user_role'</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token string single-quoted-string">'admin'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-function">function</span> <span class="token function-definition function">requireLogin</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token scope"><span class="token keyword keyword-self">self</span><span class="token punctuation">::</span></span><span class="token function">isLoggedIn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">header</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'Location: '</span> <span class="token operator">.</span> <span class="token constant">APP_URL</span> <span class="token operator">.</span> <span class="token string single-quoted-string">'/login'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword keyword-exit">exit</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-function">function</span> <span class="token function-definition function">requireAdmin</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token scope"><span class="token keyword keyword-self">self</span><span class="token punctuation">::</span></span><span class="token function">requireLogin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token scope"><span class="token keyword keyword-self">self</span><span class="token punctuation">::</span></span><span class="token function">isAdmin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">header</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'Location: '</span> <span class="token operator">.</span> <span class="token constant">APP_URL</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword keyword-exit">exit</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</span></code></pre><p><strong>الاستخدام:</strong></p>
+<pre data-role="codeBlock" data-info="php" class="language-php php"><code><span class="token scope">SessionHelper<span class="token punctuation">::</span></span><span class="token function">set</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'user_id'</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token scope">SessionHelper<span class="token punctuation">::</span></span><span class="token function">requireAdmin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// يتأكد المستخدم أدمن</span>
+</code></pre><hr>
+<h2 id="-الجزء-العاشر-سلة-التسوق-shopping-cart">🛒 الجزء العاشر: سلة التسوق (Shopping Cart) </h2>
+<h3 id="خطوة-14-carthelper">خطوة 14: CartHelper </h3>
+<p>ملف <code>app/helpers/CartHelper.php</code>:</p>
+<pre data-role="codeBlock" data-info="php" class="language-php php"><code><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
+<span class="token keyword keyword-class">class</span> <span class="token class-name-definition class-name">CartHelper</span> <span class="token punctuation">{</span>
+    <span class="token comment">// إضافة منتج للسلة</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-function">function</span> <span class="token function-definition function">add</span><span class="token punctuation">(</span><span class="token variable">$productId</span><span class="token punctuation">,</span> <span class="token variable">$quantity</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token keyword keyword-isset">isset</span><span class="token punctuation">(</span><span class="token global">$_SESSION</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'cart'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token global">$_SESSION</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'cart'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token keyword keyword-isset">isset</span><span class="token punctuation">(</span><span class="token global">$_SESSION</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'cart'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token variable">$productId</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token global">$_SESSION</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'cart'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token variable">$productId</span><span class="token punctuation">]</span> <span class="token operator">+=</span> <span class="token variable">$quantity</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword keyword-else">else</span> <span class="token punctuation">{</span>
+            <span class="token global">$_SESSION</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'cart'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token variable">$productId</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token variable">$quantity</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// تحديث كمية منتج</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-function">function</span> <span class="token function-definition function">update</span><span class="token punctuation">(</span><span class="token variable">$productId</span><span class="token punctuation">,</span> <span class="token variable">$quantity</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token variable">$quantity</span> <span class="token operator">&lt;=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token scope"><span class="token keyword keyword-self">self</span><span class="token punctuation">::</span></span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token variable">$productId</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword keyword-else">else</span> <span class="token punctuation">{</span>
+            <span class="token global">$_SESSION</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'cart'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token variable">$productId</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token variable">$quantity</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// حذف منتج من السلة</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-function">function</span> <span class="token function-definition function">remove</span><span class="token punctuation">(</span><span class="token variable">$productId</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword keyword-unset">unset</span><span class="token punctuation">(</span><span class="token global">$_SESSION</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'cart'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token variable">$productId</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// إفراغ السلة</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-function">function</span> <span class="token function-definition function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token global">$_SESSION</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'cart'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// جلب محتويات السلة</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-function">function</span> <span class="token function-definition function">getItems</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword keyword-return">return</span> <span class="token global">$_SESSION</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'cart'</span><span class="token punctuation">]</span> <span class="token operator">??</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// حساب الإجمالي</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-function">function</span> <span class="token function-definition function">getTotal</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token variable">$total</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token variable">$productModel</span> <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Product</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        
+        <span class="token keyword keyword-foreach">foreach</span> <span class="token punctuation">(</span><span class="token scope"><span class="token keyword keyword-self">self</span><span class="token punctuation">::</span></span><span class="token function">getItems</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword keyword-as">as</span> <span class="token variable">$productId</span> <span class="token operator">=&gt;</span> <span class="token variable">$quantity</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token variable">$product</span> <span class="token operator">=</span> <span class="token variable">$productModel</span><span class="token operator">-&gt;</span><span class="token function">getById</span><span class="token punctuation">(</span><span class="token variable">$productId</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token variable">$product</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token variable">$price</span> <span class="token operator">=</span> <span class="token variable">$product</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'sale_price'</span><span class="token punctuation">]</span> <span class="token operator">??</span> <span class="token variable">$product</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'price'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+                <span class="token variable">$total</span> <span class="token operator">+=</span> <span class="token variable">$price</span> <span class="token operator">*</span> <span class="token variable">$quantity</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        
+        <span class="token keyword keyword-return">return</span> <span class="token variable">$total</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// عدد المنتجات في السلة</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-function">function</span> <span class="token function-definition function">getCount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword keyword-return">return</span> <span class="token function">array_sum</span><span class="token punctuation">(</span><span class="token scope"><span class="token keyword keyword-self">self</span><span class="token punctuation">::</span></span><span class="token function">getItems</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</span></code></pre><hr>
+<h3 id="خطوة-15-cartcontroller">خطوة 15: CartController </h3>
+<pre data-role="codeBlock" data-info="php" class="language-php php"><code><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
+<span class="token keyword keyword-class">class</span> <span class="token class-name-definition class-name">CartController</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-private">private</span> <span class="token variable">$productModel</span><span class="token punctuation">;</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-function">function</span> <span class="token function-definition function">__construct</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token scope">SessionHelper<span class="token punctuation">::</span></span><span class="token function">requireLogin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token this keyword">$this</span><span class="token operator">-&gt;</span><span class="token property">productModel</span> <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Product</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-function">function</span> <span class="token function-definition function">index</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token variable">$cartItems</span> <span class="token operator">=</span> <span class="token scope">CartHelper<span class="token punctuation">::</span></span><span class="token function">getItems</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token variable">$items</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token variable">$total</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+        <span class="token keyword keyword-foreach">foreach</span> <span class="token punctuation">(</span><span class="token variable">$cartItems</span> <span class="token keyword keyword-as">as</span> <span class="token variable">$productId</span> <span class="token operator">=&gt;</span> <span class="token variable">$quantity</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token variable">$product</span> <span class="token operator">=</span> <span class="token this keyword">$this</span><span class="token operator">-&gt;</span><span class="token property">productModel</span><span class="token operator">-&gt;</span><span class="token function">getById</span><span class="token punctuation">(</span><span class="token variable">$productId</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token variable">$product</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token variable">$price</span> <span class="token operator">=</span> <span class="token variable">$product</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'sale_price'</span><span class="token punctuation">]</span> <span class="token operator">??</span> <span class="token variable">$product</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'price'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+                <span class="token variable">$items</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span>
+                    <span class="token string single-quoted-string">'product'</span> <span class="token operator">=&gt;</span> <span class="token variable">$product</span><span class="token punctuation">,</span>
+                    <span class="token string single-quoted-string">'quantity'</span> <span class="token operator">=&gt;</span> <span class="token variable">$quantity</span><span class="token punctuation">,</span>
+                    <span class="token string single-quoted-string">'subtotal'</span> <span class="token operator">=&gt;</span> <span class="token variable">$price</span> <span class="token operator">*</span> <span class="token variable">$quantity</span>
+                <span class="token punctuation">]</span><span class="token punctuation">;</span>
+                <span class="token variable">$total</span> <span class="token operator">+=</span> <span class="token variable">$price</span> <span class="token operator">*</span> <span class="token variable">$quantity</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword keyword-require_once">require_once</span> <span class="token constant">__DIR__</span> <span class="token operator">.</span> <span class="token string single-quoted-string">'/../../views/layouts/header.php'</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-require_once">require_once</span> <span class="token constant">__DIR__</span> <span class="token operator">.</span> <span class="token string single-quoted-string">'/../../views/cart/index.php'</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-require_once">require_once</span> <span class="token constant">__DIR__</span> <span class="token operator">.</span> <span class="token string single-quoted-string">'/../../views/layouts/footer.php'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-function">function</span> <span class="token function-definition function">add</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token global">$_SERVER</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'REQUEST_METHOD'</span><span class="token punctuation">]</span> <span class="token operator">===</span> <span class="token string single-quoted-string">'POST'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token variable">$productId</span> <span class="token operator">=</span> <span class="token global">$_POST</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'product_id'</span><span class="token punctuation">]</span> <span class="token operator">??</span> <span class="token number">0</span><span class="token punctuation">;</span>
+            <span class="token variable">$quantity</span> <span class="token operator">=</span> <span class="token global">$_POST</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'quantity'</span><span class="token punctuation">]</span> <span class="token operator">??</span> <span class="token number">1</span><span class="token punctuation">;</span>
+
+            <span class="token scope">CartHelper<span class="token punctuation">::</span></span><span class="token function">add</span><span class="token punctuation">(</span><span class="token variable">$productId</span><span class="token punctuation">,</span> <span class="token variable">$quantity</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            
+            <span class="token function">header</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'Location: '</span> <span class="token operator">.</span> <span class="token constant">APP_URL</span> <span class="token operator">.</span> <span class="token string single-quoted-string">'/cart'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword keyword-exit">exit</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-function">function</span> <span class="token function-definition function">update</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token global">$_SERVER</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'REQUEST_METHOD'</span><span class="token punctuation">]</span> <span class="token operator">===</span> <span class="token string single-quoted-string">'POST'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token variable">$productId</span> <span class="token operator">=</span> <span class="token global">$_POST</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'product_id'</span><span class="token punctuation">]</span> <span class="token operator">??</span> <span class="token number">0</span><span class="token punctuation">;</span>
+            <span class="token variable">$quantity</span> <span class="token operator">=</span> <span class="token global">$_POST</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'quantity'</span><span class="token punctuation">]</span> <span class="token operator">??</span> <span class="token number">1</span><span class="token punctuation">;</span>
+
+            <span class="token scope">CartHelper<span class="token punctuation">::</span></span><span class="token function">update</span><span class="token punctuation">(</span><span class="token variable">$productId</span><span class="token punctuation">,</span> <span class="token variable">$quantity</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            
+            <span class="token function">header</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'Location: '</span> <span class="token operator">.</span> <span class="token constant">APP_URL</span> <span class="token operator">.</span> <span class="token string single-quoted-string">'/cart'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword keyword-exit">exit</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-function">function</span> <span class="token function-definition function">remove</span><span class="token punctuation">(</span><span class="token variable">$productId</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token scope">CartHelper<span class="token punctuation">::</span></span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token variable">$productId</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">header</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'Location: '</span> <span class="token operator">.</span> <span class="token constant">APP_URL</span> <span class="token operator">.</span> <span class="token string single-quoted-string">'/cart'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-exit">exit</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</span></code></pre><hr>
+<h2 id="-الجزء-الحادي-عشر-الدفع-الإلكتروني-stripe">💳 الجزء الحادي عشر: الدفع الإلكتروني (Stripe) </h2>
+<h3 id="خطوة-16-تثبيت-stripe">خطوة 16: تثبيت Stripe </h3>
+<p>في Terminal:</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token function">composer</span> require stripe/stripe-php
+</code></pre><h3 id="خطوة-17-stripehelper">خطوة 17: StripeHelper </h3>
+<p>ملف <code>app/helpers/StripeHelper.php</code>:</p>
+<pre data-role="codeBlock" data-info="php" class="language-php php"><code><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
+<span class="token keyword keyword-require_once">require_once</span> <span class="token constant">__DIR__</span> <span class="token operator">.</span> <span class="token string single-quoted-string">'/../../vendor/autoload.php'</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name-definition class-name">StripeHelper</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-function">function</span> <span class="token function-definition function">createCheckoutSession</span><span class="token punctuation">(</span><span class="token variable">$orderId</span><span class="token punctuation">,</span> <span class="token variable">$items</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name class-name-fully-qualified static-context"><span class="token punctuation">\</span>Stripe<span class="token punctuation">\</span>Stripe</span><span class="token operator">::</span><span class="token function">setApiKey</span><span class="token punctuation">(</span><span class="token constant">STRIPE_SECRET_KEY</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token variable">$lineItems</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-foreach">foreach</span> <span class="token punctuation">(</span><span class="token variable">$items</span> <span class="token keyword keyword-as">as</span> <span class="token variable">$item</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token variable">$lineItems</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span>
+                <span class="token string single-quoted-string">'price_data'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+                    <span class="token string single-quoted-string">'currency'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'usd'</span><span class="token punctuation">,</span>
+                    <span class="token string single-quoted-string">'product_data'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+                        <span class="token string single-quoted-string">'name'</span> <span class="token operator">=&gt;</span> <span class="token variable">$item</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'product'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'name'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                    <span class="token string single-quoted-string">'unit_amount'</span> <span class="token operator">=&gt;</span> <span class="token variable">$item</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'product'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'price'</span><span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token comment">// بالسنت</span>
+                <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token string single-quoted-string">'quantity'</span> <span class="token operator">=&gt;</span> <span class="token variable">$item</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'quantity'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token variable">$session</span> <span class="token operator">=</span> <span class="token class-name class-name-fully-qualified static-context"><span class="token punctuation">\</span>Stripe<span class="token punctuation">\</span>Checkout<span class="token punctuation">\</span>Session</span><span class="token operator">::</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+            <span class="token string single-quoted-string">'payment_method_types'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span><span class="token string single-quoted-string">'card'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token string single-quoted-string">'line_items'</span> <span class="token operator">=&gt;</span> <span class="token variable">$lineItems</span><span class="token punctuation">,</span>
+            <span class="token string single-quoted-string">'mode'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'payment'</span><span class="token punctuation">,</span>
+            <span class="token string single-quoted-string">'success_url'</span> <span class="token operator">=&gt;</span> <span class="token constant">APP_URL</span> <span class="token operator">.</span> <span class="token string single-quoted-string">'/orders/success?order_id='</span> <span class="token operator">.</span> <span class="token variable">$orderId</span><span class="token punctuation">,</span>
+            <span class="token string single-quoted-string">'cancel_url'</span> <span class="token operator">=&gt;</span> <span class="token constant">APP_URL</span> <span class="token operator">.</span> <span class="token string single-quoted-string">'/orders/cancel?order_id='</span> <span class="token operator">.</span> <span class="token variable">$orderId</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword keyword-return">return</span> <span class="token variable">$session</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</span></code></pre><hr>
+<h2 id="-الجزء-الثاني-عشر-نصائح-للتطبيق">🎓 الجزء الثاني عشر: نصائح للتطبيق </h2>
+<h3 id="ترتيب-بناء-المشروع-خطوة-بخطوة">ترتيب بناء المشروع (خطوة بخطوة) </h3>
+<ol>
+<li>
+<p><strong>ابدأ بالإعدادات</strong> ✅</p>
+<ul>
+<li><code>config/env.php</code></li>
+<li><code>config/database.php</code></li>
+<li><code>config/database.sql</code></li>
+</ul>
+</li>
+<li>
+<p><strong>بعدها المجلدات والملفات الأساسية</strong> ✅</p>
+<ul>
+<li><code>public/index.php</code></li>
+<li><code>public/.htaccess</code></li>
+</ul>
+</li>
+<li>
+<p><strong>بعدها الـ Helpers</strong> ✅</p>
+<ul>
+<li><code>SessionHelper.php</code></li>
+<li><code>ValidationHelper.php</code></li>
+<li><code>CartHelper.php</code></li>
+</ul>
+</li>
+<li>
+<p><strong>بعدها الـ Models</strong> ✅</p>
+<ul>
+<li><code>User.php</code></li>
+<li><code>Category.php</code></li>
+<li><code>Product.php</code></li>
+<li><code>Order.php</code></li>
+</ul>
+</li>
+<li>
+<p><strong>بعدها الـ Controllers</strong> ✅</p>
+<ul>
+<li><code>HomeController.php</code></li>
+<li><code>AuthController.php</code></li>
+<li><code>ProductController.php</code></li>
+<li><code>CartController.php</code></li>
+<li><code>OrderController.php</code></li>
+<li><code>AdminController.php</code></li>
+</ul>
+</li>
+<li>
+<p><strong>أخيراً الـ Views</strong> ✅</p>
+<ul>
+<li><code>layouts/header.php</code> و <code>footer.php</code></li>
+<li>باقي الصفحات حسب الحاجة</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="أخطاء-شائعة-وحلولها">أخطاء شائعة وحلولها </h3>
+<h4 id="-خطأ-call-to-undefined-function">❌ خطأ: "Call to undefined function" </h4>
+<p><strong>السبب:</strong> نسيت تعمل <code>require_once</code> للملف<br>
+<strong>الحل:</strong> تأكد إنك حمّلت كل الملفات في <code>public/index.php</code></p>
+<h4 id="-خطأ-404-not-found-في-كل-الصفحات">❌ خطأ: "404 Not Found" في كل الصفحات </h4>
+<p><strong>السبب:</strong> ملف <code>.htaccess</code> مش موجود أو <code>mod_rewrite</code> مش مفعّل<br>
+<strong>الحل:</strong> تأكد من وجود الملف وتفعيل <code>mod_rewrite</code> في Apache</p>
+<h4 id="-خطأ-access-denied-for-user">❌ خطأ: "Access denied for user" </h4>
+<p><strong>السبب:</strong> بيانات قاعدة البيانات غلط في <code>env.php</code><br>
+<strong>الحل:</strong> راجع الباسوورد واسم المستخدم</p>
+<h4 id="-خطأ-الصور-مش-بتظهر">❌ خطأ: الصور مش بتظهر </h4>
+<p><strong>السبب:</strong> المسار غلط أو المجلد مالوش صلاحيات<br>
+<strong>الحل:</strong> تأكد من <code>chmod 755 uploads/</code></p>
+<hr>
+<h2 id="-الخلاصة-والخطوات-التالية">🎯 الخلاصة والخطوات التالية </h2>
+<h3 id="-ما-أنجزناه">✅ ما أنجزناه </h3>
+<p>بعد اتباع هذا الدليل، يكون عندك:</p>
+<ul>
+<li>✅ متجر إلكتروني كامل بنظام MVC</li>
+<li>✅ نظام تسجيل دخول آمن</li>
+<li>✅ إدارة منتجات وتصنيفات</li>
+<li>✅ سلة تسوق</li>
+<li>✅ نظام طلبات</li>
+<li>✅ تكامل مع Stripe للدفع</li>
+<li>✅ لوحة تحكم للأدمن</li>
+</ul>
+<h3 id="-للتطوير-أكثر">📚 للتطوير أكثر </h3>
+<p><strong>ميزات إضافية تقدر تضيفها:</strong></p>
+<ul>
+<li>🔍 نظام بحث متقدم</li>
+<li>⭐ تقييمات ومراجعات المنتجات</li>
+<li>📧 إرسال إيميلات تأكيد</li>
+<li>📱 تصميم متجاوب (Responsive)</li>
+<li>🌍 دعم لغات متعددة</li>
+<li>📊 تقارير مبيعات متقدمة</li>
+<li>🎫 كوبونات خصم</li>
+<li>📦 تتبع الشحن</li>
+</ul>
+<h3 id="-نصائح-الأمان-النهائية">🔒 نصائح الأمان النهائية </h3>
+<ol>
+<li>
+<p><strong>لا تنسخ الملفات الحساسة على Git</strong></p>
+<ul>
+<li>أضف <code>config/env.php</code> في <code>.gitignore</code></li>
+</ul>
+</li>
+<li>
+<p><strong>استخدم HTTPS في الإنتاج</strong></p>
+<ul>
+<li>لا تنشر الموقع بدون SSL</li>
+</ul>
+</li>
+<li>
+<p><strong>غيّر الباسوورد الافتراضي للأدمن</strong></p>
+<ul>
+<li><code>admin123</code> للتجربة فقط!</li>
+</ul>
+</li>
+<li>
+<p><strong>فعّل Error Reporting بحذر</strong></p>
+<ul>
+<li>في الإنتاج خليها <code>APP_ENV = production</code></li>
+</ul>
+</li>
+<li>
+<p><strong>عمل Backup دوري</strong></p>
+<ul>
+<li>احفظ نسخة من قاعدة البيانات</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="-الدعم-والمساعدة">📞 الدعم والمساعدة </h2>
+<p><strong>مصادر مفيدة:</strong></p>
+<ul>
+<li><a href="https://www.php.net/docs.php">توثيق PHP الرسمي</a></li>
+<li><a href="https://dev.mysql.com/doc/">توثيق MySQL</a></li>
+<li><a href="https://stripe.com/docs/api">Stripe API Docs</a></li>
+</ul>
+<p><strong>أسئلة شائعة:</strong></p>
+<ul>
+<li>المشروع موجود في <code>C:\xampp\htdocs\codezilla-store</code></li>
+<li>الرابط: <code>http://localhost/codezilla-store/public</code></li>
+<li>phpMyAdmin: <code>http://localhost/phpmyadmin</code></li>
+</ul>
+<hr>
+<h2 id="-مبروك">🎉 مبروك! </h2>
+<p>أنت الآن عندك فهم كامل لبناء متجر إلكتروني من الصفر باستخدام PHP و MySQL!</p>
+<p><strong>لا تتوقف هنا:</strong></p>
+<ul>
+<li>جرب تضيف ميزات جديدة</li>
+<li>اقرأ عن Design Patterns</li>
+<li>تعلم Laravel (فريموورك PHP احترافي)</li>
+<li>ابني مشاريع أكثر</li>
+</ul>
+<p><strong>حظ موفق في رحلتك البرمجية! 🚀</strong></p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
